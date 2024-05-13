@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 /**
  * Created by tharinduruchira on 2024-05-13.
  *
+ * @param <Entity> Entity type selected
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.common
- *
+ * <p>
  * Most upper level interface of controllers
- * @param <Entity> Entity type selected
  */
 
 @CrossOrigin(origins = Globals.ALLOWED_ORIGINS)
-public interface BaseController <Entity extends BaseEntity> {
+public interface BaseController<Entity extends BaseEntity> {
 }

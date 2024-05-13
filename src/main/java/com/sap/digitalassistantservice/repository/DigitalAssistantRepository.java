@@ -10,7 +10,7 @@ import java.util.Optional;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.repository
- *
+ * <p>
  * Repository interface for Digital Assistant
  */
 

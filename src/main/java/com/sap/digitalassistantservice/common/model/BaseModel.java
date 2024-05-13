@@ -7,23 +7,23 @@ import java.io.Serializable;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.common
- *
+ * <p>
  * Most upper level for all model classes
  */
 
 public abstract class BaseModel implements Serializable {
- public abstract long getId();
+    public abstract long getId();
 
- @Override
- public boolean equals(Object o) {
-  if (this == o) return true;
-  if (o == null || getClass() != o.getClass()) return false;
-  boolean eq = getId() == ((BaseModel) o).getId();
-  return eq;
- }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        boolean eq = getId() == ((BaseModel) o).getId();
+        return eq;
+    }
 
- @Override
- public int hashCode() {
-  return (int) getId();
- }
+    @Override
+    public int hashCode() {
+        return (int) getId();
+    }
 }

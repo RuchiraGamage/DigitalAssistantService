@@ -9,7 +9,7 @@ import java.io.Serializable;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.common
- *
+ * <p>
  * Base class of response model
  */
 
@@ -20,6 +20,6 @@ import java.io.Serializable;
 @ToString
 public abstract class ResponseModel implements Serializable {
 
- protected int code;
- protected String msg;
+    protected int code;
+    protected String msg;
 }

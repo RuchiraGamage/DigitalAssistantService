@@ -13,35 +13,36 @@ import org.springframework.stereotype.Service;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.service
- *
- *
+ * <p>
+ * <p>
  * Service class for Digital Assistant
  */
 
 @Service
 public class DigitalAssistantService extends BaseCrudServiceImpl<DigitalAssistant> {
 
- private final DigitalAssistantRepository digitalAssistantRepository;
- public DigitalAssistantService(DigitalAssistantRepository digitalAssistantRepository) {
-  super(digitalAssistantRepository);
-  this.digitalAssistantRepository = digitalAssistantRepository;
- }
+    private final DigitalAssistantRepository digitalAssistantRepository;
 
- public boolean checkDigitalAssistantAlreadyExistsByName(String name) throws SAPException {
-  try {
-   return digitalAssistantRepository.findByName(name).isPresent();
-  } catch (Exception e) {
-   SAPLogger.error(e);
-   throw SAPException.makeServerException();
-  }
- }
+    public DigitalAssistantService(DigitalAssistantRepository digitalAssistantRepository) {
+        super(digitalAssistantRepository);
+        this.digitalAssistantRepository = digitalAssistantRepository;
+    }
 
- public DigitalAssistant getAssistanceByName(String assistantName) throws SAPException {
-  try {
-   return digitalAssistantRepository.findByName(assistantName).get();
-  } catch (Exception e) {
-   SAPLogger.error(e);
-   throw SAPException.makeException(ErrorResponse.STATUS_NOT_FOUND , e.getMessage());
-  }
- }
+    public boolean checkDigitalAssistantAlreadyExistsByName(String name) throws SAPException {
+        try {
+            return digitalAssistantRepository.findByName(name).isPresent();
+        } catch (Exception e) {
+            SAPLogger.error(e);
+            throw SAPException.makeServerException();
+        }
+    }
+
+    public DigitalAssistant getAssistanceByName(String assistantName) throws SAPException {
+        try {
+            return digitalAssistantRepository.findByName(assistantName).get();
+        } catch (Exception e) {
+            SAPLogger.error(e);
+            throw SAPException.makeException(ErrorResponse.STATUS_NOT_FOUND, e.getMessage());
+        }
+    }
 }

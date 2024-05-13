@@ -12,7 +12,7 @@ import lombok.ToString;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.model
- *
+ * <p>
  * Database entity class for Digital Assistant
  */
 
@@ -23,7 +23,7 @@ import lombok.ToString;
 @Table(name = "tbl_digital_assistant")
 public class DigitalAssistant extends BaseEntity {
 
- private String name;
+    private String name;
 
- private String text;
+    private String text;
 }

@@ -10,27 +10,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * Created by tharinduruchira on 2024-05-13.
  *
+ * @param <Entity> Entity type selected
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.common
  * CRUD controller definition
- * @param <Entity> Entity type selected
  */
 
-public interface BaseCrudController <Entity extends BaseEntity> extends BaseController<Entity> {
+public interface BaseCrudController<Entity extends BaseEntity> extends BaseController<Entity> {
 
- /**
-  * Save new entity
-  * @param entity Entity to be saved
-  * @return Response with status
-  */
- @PostMapping
- ResponseEntity add(@RequestBody Entity entity);
+    /**
+     * Save new entity
+     *
+     * @param entity Entity to be saved
+     * @return Response with status
+     */
+    @PostMapping
+    ResponseEntity add(@RequestBody Entity entity);
 
- /**
-  * Get entity by ID
-  * @param id Entity ID
-  * @return Response with status
-  */
- @GetMapping("/{id}")
- ResponseEntity getById(@PathVariable long id);
+    /**
+     * Get entity by ID
+     *
+     * @param id Entity ID
+     * @return Response with status
+     */
+    @GetMapping("/{id}")
+    ResponseEntity getById(@PathVariable long id);
 }

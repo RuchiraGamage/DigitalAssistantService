@@ -5,10 +5,10 @@ package com.sap.digitalassistantservice.common.util;
  *
  * @project : digital-assistant-service
  * com.sap.digitalassistantservice.common
- *
+ * <p>
  * Common class which contains global constants
  */
 
 public class Globals {
- public static final String ALLOWED_ORIGINS = "*";
+    public static final String ALLOWED_ORIGINS = "*";
 }
